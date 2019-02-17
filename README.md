@@ -13,9 +13,9 @@ See also [REST API docs](https://moonbase.exchange/api/v1/swagger/index.html).
 API key & secret can be generated in user dashboard.  
 
 ### Algorithm
-* Build a map (associative array) of ```key``` and ```timestamp```, where:  
-```key``` is your API key and ```timestamp``` is current UNIX timestamp (number of seconds since 1 January 1970).  
-* Encode the map into query string (e.g. ```“key=XXX&timestamp=YYY”```).
+* Build a map (associative array) of ```key```, ```timestamp``` and ```auth_version```, where:  
+```key``` is your API key and ```timestamp``` is current UNIX timestamp (number of seconds since 1 January 1970). Set ```auth_version``` to ```1.0```  
+* Encode the map into query string (e.g. ```“key=XXX&timestamp=YYY&auth_version=1.0”```).
 * Build request string just as if you were signing a request to ```GET /users/verify``` (e.g. ```“GET\n/users/verify\n{{query_string}}”```).
 * Calculate auth_signature via HMAC256 algorithm using API secret and request string.
 * Add a ```signature``` parameter to you ```key``` and ```timestamp``` request parameters.
