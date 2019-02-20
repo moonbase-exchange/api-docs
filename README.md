@@ -570,14 +570,14 @@ Same as the join, just use the ```get_snapshot``` event instead of ```phx_join``
 
 ### Balances
 #### Join
-**Topic:** ```/balances```  
+**Topic:** ```/balances/```  
 
 **Example *out* frame:**
 ```
 {
     "ref": "8",
     "join_ref": "8",
-    "topic": "/balances",
+    "topic": "/balances/",
     "event": "phx_join",
     "payload": {}
 }
@@ -588,7 +588,7 @@ Same as the join, just use the ```get_snapshot``` event instead of ```phx_join``
 {
     "ref": "8",
     "join_ref": "8",
-    "topic": "/balances",
+    "topic": "/balances/",
     "event": "phx_reply",
     "payload": {
         "status": "ok",
@@ -617,7 +617,7 @@ Same as the join, just use the ```get_snapshot``` event instead of ```phx_join``
 {
     "ref": null,
     "join_ref": null,
-    "topic": "/balances",
+    "topic": "/balances/",
     "event": "upsert",
     "payload": {
         "data": [
@@ -649,7 +649,7 @@ Same as the join, just use the ```get_snapshot``` event instead of ```phx_join``
 {
     "ref": "9",
     "join_ref": "9",
-    "topic": "/positions",
+    "topic": "/positions/",
     "event": "phx_join",
     "payload": {}
 }
@@ -660,7 +660,7 @@ Same as the join, just use the ```get_snapshot``` event instead of ```phx_join``
 {
     "ref": "9",
     "join_ref": "9",
-    "topic": "/positions",
+    "topic": "/positions/",
     "event": "phx_reply",
     "payload": {
         "status": "ok",
@@ -691,7 +691,7 @@ Same as the join, just use the ```get_snapshot``` event instead of ```phx_join``
 ```
 
 #### Assign
-**Topic:** ```/positions``` 
+**Topic:** ```/positions/``` 
 
 **Parameters:**  
 
@@ -705,7 +705,7 @@ Same as the join, just use the ```get_snapshot``` event instead of ```phx_join``
 {
     "ref": "10",
     "join_ref": "9",
-    "topic": "/positions",
+    "topic": "/positions/",
     "event": "assign",
     "payload": {
         "ETC_D:BTC_D": "10",
@@ -719,7 +719,7 @@ Same as the join, just use the ```get_snapshot``` event instead of ```phx_join``
 {
     "ref": "10",
     "join_ref": "9",
-    "topic": "/positions",
+    "topic": "/positions/",
     "event": "phx_reply",
     "payload": {
         "status": "ok",
@@ -755,7 +755,7 @@ Same as the join, just use the ```get_snapshot``` event instead of ```phx_join``
 {
     "ref": null,
     "join_ref": null,
-    "topic": "/positions",
+    "topic": "/positions/",
     "event": "upsert",
     "payload": {
         "data": [
@@ -775,7 +775,7 @@ Same as the join, just use the ```get_snapshot``` event instead of ```phx_join``
 
 ### Deposits
 #### Join
-**Topic:** ```/deposits``` 
+**Topic:** ```/deposits/``` 
 
 **Parameters:**  
 
@@ -789,7 +789,7 @@ Same as the join, just use the ```get_snapshot``` event instead of ```phx_join``
 {
     "ref": "11",
     "join_ref": "11",
-    "topic": "/deposits",
+    "topic": "/deposits/",
     "event": "phx_join",
     "payload": {}
 }
@@ -800,7 +800,7 @@ Same as the join, just use the ```get_snapshot``` event instead of ```phx_join``
 {
     "ref": "11",
     "join_ref": "11",
-    "topic": "/deposits",
+    "topic": "/deposits/",
     "event": "phx_reply",
     "payload": {
         "status": "ok",
@@ -822,7 +822,7 @@ Same as the join, just use the ```get_snapshot``` event instead of ```phx_join``
 ```
 
 #### Get deposit address
-**Topic:** ```/deposits``` 
+**Topic:** ```/deposits/``` 
 
 **Parameters:**  
 
@@ -835,7 +835,7 @@ Same as the join, just use the ```get_snapshot``` event instead of ```phx_join``
 {
     "ref": "12",
     "join_ref": "11",
-    "topic": "/deposits",
+    "topic": "/deposits/",
     "event": "get_deposit_address",
     "payload": {
         "asset": "BTC_T"
@@ -848,7 +848,7 @@ Same as the join, just use the ```get_snapshot``` event instead of ```phx_join``
 {
     "ref": "12",
     "join_ref": "11",
-    "topic": "/deposits",
+    "topic": "/deposits/",
     "event": "phx_reply",
     "payload": {
         "status": "ok",
@@ -862,7 +862,7 @@ Same as the join, just use the ```get_snapshot``` event instead of ```phx_join``
 
 ### Withdrawals
 #### Join
-**Topic:** ```/withdrawals``` 
+**Topic:** ```/withdrawals/``` 
 
 **Parameters:**  
 
@@ -876,7 +876,7 @@ Same as the join, just use the ```get_snapshot``` event instead of ```phx_join``
 {
     "ref": "13",
     "join_ref": "13",
-    "topic": "/withdrawals",
+    "topic": "/withdrawals/",
     "event": "phx_join",
     "payload": {}
 }
@@ -887,7 +887,7 @@ Same as the join, just use the ```get_snapshot``` event instead of ```phx_join``
 {
     "ref": "13",
     "join_ref": "13",
-    "topic": "/withdrawals",
+    "topic": "/withdrawals/",
     "event": "phx_reply",
     "payload": {
         "status": "ok",
@@ -905,7 +905,7 @@ Same as the join, just use the ```get_snapshot``` event instead of ```phx_join``
 ```
 
 #### Create
-**Topic:** ```/withdrawals``` 
+**Topic:** ```/withdrawals/``` 
 
 **Parameters:**  
 
@@ -920,7 +920,7 @@ Same as the join, just use the ```get_snapshot``` event instead of ```phx_join``
 {
     "ref": "14",
     "join_ref": "13",
-    "topic": "/withdrawals",
+    "topic": "/withdrawals/",
     "event": "create_withdrawal",
     "payload": {
         "amount": "1.0",
@@ -935,7 +935,7 @@ Same as the join, just use the ```get_snapshot``` event instead of ```phx_join``
 {
     "ref": "14",
     "join_ref": "13",
-    "topic": "/withdrawals",
+    "topic": "/withdrawals/",
     "event": "phx_reply",
     "payload": {
         "status": "ok",
@@ -949,3 +949,6 @@ Same as the join, just use the ```get_snapshot``` event instead of ```phx_join``
     }
 }
 ```
+
+## Examples
+[Elixir](https://github.com/DenisGorbachev/cryptozaur/blob/master/lib/cryptozaur/drivers/leverex_websocket.ex) using [WebSockex](https://github.com/Azolo/websockex)
