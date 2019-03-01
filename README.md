@@ -66,7 +66,7 @@ All messages have the same fields:
 
 |Name|Type|Required|Default|  
 |:---:|:---:|:---:|:---:|
-|symbols|[string]|✖|[]|
+|symbols|[string]|no|[]|
 
 **Example *out* frame:**
 ```
@@ -206,9 +206,9 @@ All messages have the same fields:
 
 |Name|Type|Required|Default|  
 |:---:|:---:|:---:|:---:|
-|from|integer|✓|-|
-|to|integer|✓|-|
-|resolution|integer|✓|-|
+|from|integer|yes|-|
+|to|integer|yes|-|
+|resolution|integer|yes|-|
 
 
 **Example *out* frame:**
@@ -298,7 +298,7 @@ Same as the join, just use the ```get_snapshot``` event instead of ```phx_join``
 
 |Name|Type|Required|Default|  
 |:---:|:---:|:---:|:---:|
-|limit|integer|✖|null|
+|limit|integer|no|null|
 
 **Example *out* frame:**
 ```
@@ -361,8 +361,8 @@ Same as the join, just use the ```get_snapshot``` event instead of ```phx_join``
 
 |Name|Type|Required|Default|  
 |:---:|:---:|:---:|:---:|
-|status|string|✖|null|
-|limit|integer|✖|1000|
+|status|string|no|null|
+|limit|integer|no|1000|
 
 **Example *out* frame:**
 ```
@@ -436,9 +436,9 @@ Same as the join, just use the ```get_snapshot``` event instead of ```phx_join``
 
 |Name|Type|Required|Default|  
 |:---:|:---:|:---:|:---:|
-|limit_price|float|✖|null|
-|trigger_price|float|✖|null|
-|requested_amount|float|✓|-|
+|limit_price|float|no|null|
+|trigger_price|float|no|null|
+|requested_amount|float|yes|-|
 
 **Example *out* frame:**
 ```
@@ -491,7 +491,7 @@ Same as the join, just use the ```get_snapshot``` event instead of ```phx_join``
 
 |Name|Type|Required|Default|  
 |:---:|:---:|:---:|:---:|
-|id|integer|✓|-|
+|id|integer|yes|-|
 
 **Example *out* frame:**
 ```
@@ -697,8 +697,8 @@ Same as the join, just use the ```get_snapshot``` event instead of ```phx_join``
 
 |Name|Type|Required|Default|  
 |:---:|:---:|:---:|:---:|
-|symbol|string|✓|-|
-|margin|decimal|✓|-|
+|symbol|string|yes|-|
+|margin|decimal|yes|-|
 
 **Example *out* frame:**
 ```
@@ -781,8 +781,8 @@ Same as the join, just use the ```get_snapshot``` event instead of ```phx_join``
 
 |Name|Type|Required|Default|  
 |:---:|:---:|:---:|:---:|
-|asset|string|✖|-|
-|limit|integer|✖|1000|
+|asset|string|no|-|
+|limit|integer|no|1000|
 
 **Example *out* frame:**
 ```
@@ -828,7 +828,7 @@ Same as the join, just use the ```get_snapshot``` event instead of ```phx_join``
 
 |Name|Type|Required|Default|  
 |:---:|:---:|:---:|:---:|
-|asset|string|✓|-|
+|asset|string|yes|-|
 
 **Example *out* frame:**
 ```
@@ -868,8 +868,8 @@ Same as the join, just use the ```get_snapshot``` event instead of ```phx_join``
 
 |Name|Type|Required|Default|  
 |:---:|:---:|:---:|:---:|
-|asset|string|✖|-|
-|limit|integer|✖|1000|
+|asset|string|no|-|
+|limit|integer|no|1000|
 
 **Example *out* frame:**
 ```
@@ -911,9 +911,9 @@ Same as the join, just use the ```get_snapshot``` event instead of ```phx_join``
 
 |Name|Type|Required|Default|  
 |:---:|:---:|:---:|:---:|
-|asset|string|✓|-|
-|address|string|✓|-|
-|amount|float|✓|-|
+|asset|string|yes|-|
+|address|string|yes|-|
+|amount|float|yes|-|
 
 **Example *out* frame:**
 ```
