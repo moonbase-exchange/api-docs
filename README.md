@@ -13,13 +13,15 @@ See also [REST API docs](https://moonbase.exchange/api/v1/swagger/index.html).
 API key & secret can be generated in user dashboard.  
 
 ### Algorithm
-* Build a map (associative array) of ```key```, ```timestamp``` and ```auth_version```, where:  
+* Build a map (an associative array) of ```key```, ```timestamp``` and ```auth_version``` where  
 ```key``` is your API key and ```timestamp``` is current UNIX timestamp (number of seconds since 1 January 1970). Set ```auth_version``` to ```1.0```  
-* Encode the map into query string (e.g. ```“key=XXX&timestamp=YYY&auth_version=1.0”```).
-* Build request string just as if you were signing a request to ```GET /users/verify``` (e.g. ```“GET\n/users/verify\n{{query_string}}”```).
-* Calculate auth_signature via HMAC256 algorithm using API secret and request string.
-* Add a ```signature``` parameter to you ```key``` and ```timestamp``` request parameters.
-* Send request.
+* Encode the map into query string (e.g. ```“key={@Alexey put real generated key . here}&timestamp=1551556863&auth_version=1.0”```).
+* Build a request string just as if you were signing a request to ```GET /users/verify``` (e.g. ```“GET\n/users/verify\n{{query_string}}”```).
+* Calculate ```signature``` via HMAC256 algorithm using API secret and the request string ({@Alexey put a real calculated signature here as an example}).
+* Add ```signature``` parameter to your ```key``` and ```timestamp``` request parameters.
+* Send request (it should look like {@Alexey put real GET request here}).
+
+@Alexey what about POST requests? Should I put all the parameters in query string? It's worth to mention it here as well.
 
 ## Rate limits
 * Subscription: max 20 per hour for a single key  
